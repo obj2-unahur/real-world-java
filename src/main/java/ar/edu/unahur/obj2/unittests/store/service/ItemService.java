@@ -52,4 +52,8 @@ public class ItemService {
     public List<Item> getAllItem() {
         return itemRepository.readAllItems();
     }
+
+    public Item createItem(Item item) {
+        return itemRepository.create(item);
+    }
 }

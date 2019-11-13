@@ -17,6 +17,8 @@ public class ItemRepository {
     {
         itemMap = new HashMap<String, Item>();
         itemMap.put("it1", new Item("it1", "Item 1", "This is item 1", 2000, true));
+        itemMap.put("it2", new Item("it2", "Item 2", "This is item 2", 3000, true));
+        itemMap.put("it3", new Item("it3", "Item 3", "This is item 3", 4000, true));
     }
 
     public List<Item> readAllItems() {
@@ -26,5 +28,12 @@ public class ItemRepository {
 
     public Item findById(String id) {
         return itemMap.get(id);
+    }
+
+    public Item create(Item item) {
+        String id = String.valueOf(itemMap.size());
+        item.setId(id);
+        itemMap.put(id, item);
+        return item;
     }
 }

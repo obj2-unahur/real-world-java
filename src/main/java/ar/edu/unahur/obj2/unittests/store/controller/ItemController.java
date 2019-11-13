@@ -21,5 +21,10 @@ public class ItemController {
         return itemService.getAllItem();
     }
 
+    @RequestMapping(path = "items", method = RequestMethod.POST )
+    public Item create(Item item) {
+        return itemService.createItem(item);
+    }
+
 
 }

@@ -21,6 +21,9 @@ public class Item {
         this.isAvailable = isAvailable;
     }
 
+    public Item() {
+    }
+
     public String getId() {
         return id;
     }
